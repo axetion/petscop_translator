@@ -1,6 +1,3 @@
 [submodule "src/go-porterstemmer"]
 	path = src/go-porterstemmer
 	url = https://github.com/reiver/go-porterstemmer
-[submodule "src/go-postagger"]
-	path = src/go-postagger
-	url = https://github.com/lessc0de/go-postagger
