@@ -14,7 +14,7 @@ func main() {
 
 	fmt.Println("Loading dictionary...")
 
-	dictionaryFh, err := os.Open("dictionary.gob")
+	dictionaryFh, err := os.Open("data/dictionary.gob")
 
 	if err != nil {
 		log.Fatal(err)
@@ -25,7 +25,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	frequenciesFh, err := os.Open("frequencies.gob")
+	frequenciesFh, err := os.Open("data/frequencies.gob")
 
 	if err != nil {
 		log.Fatal(err)

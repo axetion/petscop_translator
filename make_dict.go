@@ -109,6 +109,6 @@ func writeDictionary(inputPath string, dictionaryPath string) {
 }
 
 func main() {
-	writeDictionary("cmudict-0.7b", "dictionary.gob")
-	writeFrequencies("frequencies", "frequencies.gob")
+	writeDictionary("cmudict-0.7b", "data/dictionary.gob")
+	writeFrequencies("frequencies", "data/frequencies.gob")
 }
