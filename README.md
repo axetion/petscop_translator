@@ -12,7 +12,7 @@ No automated builds yet.
 
 - Get [Go.](https://golang.org/)
 
-- Clone the repository (if you don't have Git, you can download a ZIP using the button at the top.)
+- Clone the repository (if you don't have Git, you can download a ZIP using the button at the top.) If you clone from the command line, be sure to use `--recursive` or execute `git submodule init && git submodule update` after.
 
 - Open up a terminal and `cd` to the resulting folder.
 
