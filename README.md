@@ -51,6 +51,8 @@ I made this for a few reasons, some more equal than the others:
 
 ## How does it do?
 
+###Petscop 11 Transcript
+
 Here's the output of the program running on the transcript of the Petscop 11 conversation:
 
 ```
@@ -180,6 +182,83 @@ Two things to note:
 1. One of the first things that surprised me was that even thought PAUL is in the dictionary, even the earliest version of this program picked PALL just like Petscop itself. At least in this dictionary, PAUL and PALL are not homonyms as previously theorized: PAUL is `P AO L` (using the phonemes the CMU dictionary uses), whereas PALL is `P AA L`. I think it's pretty likely it was a delibrate "typo," but I also think it raises the possibility that if Petscop is generating these automatically, it could actually be using the CMU dictionary. I looked in my fairly old hardcover dictionary, for instance, and it had both PAUL and PALL as `P AO L`.
 
 2. The "strange accent" /u/LittlestPetscop noted was a dick. The most noticable words that screwed it up were `AND` (expected `AH N D`, got `EY N D`), `BECOME` (expected `B IH K AH M`, got `B IY K AH M`, which is not *too* unusual of a pronounciation actually), `MUSIC` (expected `M Y UW Z IH K`, got `M IY UW Z IH K`), and `PLAYS` (expected `P L EY Z`, got `P L EY S`). The program employs fuzzy string matching, so it's able to tolerate 1 phoneme being off. When choosing between potential matches, it goes for the word with the most common stem (at least, of the frequency data I had available which was not much). This, along with allowing buttons like L1+X to be *either* an S or a Z, fixed most everything except for `PLAYS`. Unfortunately, `PLACE` is more common than `PLAY` in the data I used (by a tiny amount), and so it picks it. This is the only mistake it makes, and some future improvements could fix this.
+
+###Petscop 15 Transcript
+
+```
+Ask? L2+X X L2+CIRCLE DOWN R1+TRIANGLE L2+SQUARE
+> MARKIN (approximate match)
+
+Ask? L1+X R1+TRIANGLE R2+CIRCLE
+> SIT (exact match)
+
+Ask? L2+DOWN R1+CIRCLE L2+CIRCLE
+> HERE (exact match)
+
+Ask? R2+UP Triangle L2+CIRCLE
+> FOR (exact match)
+
+Ask? R2+RIGHT L2+LEFT
+> THE (exact match)
+
+Ask? R2+SQUARE L2+CIRCLE LEFT L1+SQUARE LEFT L2+SQUARE R2+CIRCLE
+> PRESENT (approximate match)
+
+Ask? R2+RIGHT R1+TRIANGLE L1+X
+> THIS (exact match)
+
+Ask? R1+TRIANGLE L1+X
+> IS (exact match)
+
+Ask? R2+TRIANGLE LEFT L2+TRIANGLE
+> BELL (exact match)
+
+Ask? UP
+> I (exact match)
+
+Ask? DOWN L2+X
+> AM (approximate match)
+
+Ask? R2+CIRCLE R1+CIRCLE X L2+CIRCLE START
+> TIARA (exact match)
+
+Ask? L2+SQUARE X R2+CIRCLE
+> NOT (exact match)
+
+Ask? R2+TRIANGLE LEFT L2+TRIANGLE
+> BELL (exact match)
+
+Ask? R2+SQUARE L2+CIRCLE LEFT L1+X
+> PRESS (exact match)
+
+Ask? L2+SQUARE R1+TRIANGLE R2+UP R2+CIRCLE R1+CIRCLE
+> NIFTY (exact match)
+
+Ask? L2+START L2+LEFT R2+CIRCLE
+> WHAT (exact match)
+
+Ask? L2+SQUARE R1+TRIANGLE R2+UP R2+CIRCLE R1+CIRCLE
+> NIFTY (exact match)
+
+Ask? L2+SQUARE R1+UP
+> KNOW (exact match)
+
+Ask? R2+SQUARE L2+TRIANGLE R1+X
+> PLAY (exact match)
+
+Ask? L2+START L2+LEFT L2+SQUARE
+> ONE (exact match)
+
+Ask? R2+SQUARE L2+CIRCLE LEFT L1+X
+> PRESS (exact match)
+
+Ask? L2+SQUARE R1+TRIANGLE R2+UP R2+CIRCLE R1+CIRCLE
+> NIFTY (exact match)
+```
+
+Two mistakes here: "NO" ends up as "KNOW" (they sound exactly alike), and PLAYER ends up as just PLAY -- the ER sound seems to be missing entirely from the end. For the purposes of this, I've assumed DOWN is schwa (AX/ə), but this is still up for debate.
+
+Additionally the {NOT IN TABLE} line, which appears to be a botched attempt at saying MARVIN, becomes MARKIN.
 
 ## How does it work? (technical)
 

@@ -10,6 +10,7 @@ import (
 /* put here any irregular verbs the stemmer doesn't handle */
 var IRREGULAR_VERBS = map[string]string{
 	"fell": "fall",
+	"am":   "be",
 	"is":   "be",
 	"are":  "be",
 }

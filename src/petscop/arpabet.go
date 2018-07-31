@@ -11,6 +11,7 @@ var PHONEMES = map[[2]string][]string{
 	{"R2", "LEFT"}:  []string{"TH"},
 	{"R2", "UP"}:    []string{"F"},
 	{"R2", "DOWN"}:  []string{"V"},
+	{"R2", "RIGHT"}: []string{"DH"},
 	{"R2", "START"}: []string{"D"},
 
 	{"R1", "X"}:        []string{"EY"},
@@ -41,6 +42,7 @@ var PHONEMES = map[[2]string][]string{
 
 	{"LEFT", ""}:  []string{"EH"},
 	{"UP", ""}:    []string{"AY"},
+	{"DOWN", ""}:  []string{"AX"},
 	{"START", ""}: []string{"AH"},
 }
 
