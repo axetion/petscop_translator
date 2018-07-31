@@ -51,7 +51,7 @@ I made this for a few reasons, some more equal than the others:
 
 ## How does it do?
 
-###Petscop 11 Transcript
+### Petscop 11 Transcript
 
 Here's the output of the program running on the transcript of the Petscop 11 conversation:
 
@@ -183,7 +183,7 @@ Two things to note:
 
 2. The "strange accent" /u/LittlestPetscop noted was a dick. The most noticable words that screwed it up were `AND` (expected `AH N D`, got `EY N D`), `BECOME` (expected `B IH K AH M`, got `B IY K AH M`, which is not *too* unusual of a pronounciation actually), `MUSIC` (expected `M Y UW Z IH K`, got `M IY UW Z IH K`), and `PLAYS` (expected `P L EY Z`, got `P L EY S`). The program employs fuzzy string matching, so it's able to tolerate 1 phoneme being off. When choosing between potential matches, it goes for the word with the most common stem (at least, of the frequency data I had available which was not much). This, along with allowing buttons like L1+X to be *either* an S or a Z, fixed most everything except for `PLAYS`. Unfortunately, `PLACE` is more common than `PLAY` in the data I used (by a tiny amount), and so it picks it. This is the only mistake it makes, and some future improvements could fix this.
 
-###Petscop 15 Transcript
+### Petscop 15 Transcript
 
 ```
 Ask? L2+X X L2+CIRCLE DOWN R1+TRIANGLE L2+SQUARE
@@ -256,9 +256,11 @@ Ask? L2+SQUARE R1+TRIANGLE R2+UP R2+CIRCLE R1+CIRCLE
 > NIFTY (exact match)
 ```
 
-Two mistakes here: "NO" ends up as "KNOW" (they sound exactly alike), and PLAYER ends up as just PLAY -- the ER sound seems to be missing entirely from the end. For the purposes of this, I've assumed DOWN is schwa (AX/ə), but this is still up for debate.
+One mistake here: the "NO" ends up as "KNOW" since they are homophones.
 
-Additionally the {NOT IN TABLE} line, which appears to be a botched attempt at saying MARVIN, becomes MARKIN.
+An unknown button is cut off-screen during the PLAYER line, which is why it is only PLAY here. I am inclined to believe that it is either CIRCLE or RIGHT since there was only one button press noise made, and whatever button it is makes the ER sound which is new -- it's not an existing one button sound. Personally I find RIGHT to be a more likely candidate than CIRCLE, but I will not add either to the table until we actually see it on-screen. Additionally the {NOT IN TABLE} line, which appears to be a botched attempt at saying MARVIN, becomes MARKIN. 
+
+For the purposes of this, I've assumed DOWN is schwa (AX/ə), but this is still up for debate.
 
 ## How does it work? (technical)
 
