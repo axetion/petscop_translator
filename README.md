@@ -12,7 +12,7 @@ No automated builds yet.
 
 - Get [Go.](https://golang.org/)
 
-- Clone the repository (if you don't have Git, you can download a ZIP using the button at the top.)
+- Clone the repository (if you don't have Git, you can download a ZIP using the button at the top.) If you clone from the command line, be sure to use `--recursive` or execute `git submodule init && git submodule update` after.
 
 - Open up a terminal and `cd` to the resulting folder.
 
@@ -179,7 +179,7 @@ Ask? (R2+SQUARE) (TRIANGLE) (L2+TRIANGLE)
 
 Two things to note:
 
-1. One of the first things that surprised me was that even thought PAUL is in the dictionary, even the earliest version of this program picked PALL just like Petscop itself. At least in this dictionary, PAUL and PALL are not homonyms as previously theorized: PAUL is `P AO L` (using the phonemes the CMU dictionary uses), whereas PALL is `P AA L`. I think it's pretty likely it was a delibrate "typo," but I also think it raises the possibility that if Petscop is generating these automatically, it could actually be using the CMU dictionary. I looked in my fairly old hardcover dictionary, for instance, and it had both PAUL and PALL as `P AO L`.
+1. One of the first things that surprised me was that even thought PAUL is in the dictionary, even the earliest version of this program picked PALL just like Petscop itself. In earlier versions of the CMU dictionary, PAUL and PALL are not homonyms: PAUL was `P AO L` , whereas PALL was `P AA L`. However, the latest version has both as `P AO L`, and my program selects PALL instead of PAUL because PALL comes first lexicographically. I think this bolsters the odds of Petscop generating these in a similar way, since the same "mistake" was made (presumably) due to PALL coming first.
 
 2. The "strange accent" /u/LittlestPetscop noted was a dick. The most noticable words that screwed it up were `AND` (expected `AH N D`, got `EY N D`), `BECOME` (expected `B IH K AH M`, got `B IY K AH M`, which is not *too* unusual of a pronounciation actually), `MUSIC` (expected `M Y UW Z IH K`, got `M IY UW Z IH K`), and `PLAYS` (expected `P L EY Z`, got `P L EY S`). The program employs fuzzy string matching, so it's able to tolerate 1 phoneme being off. When choosing between potential matches, it goes for the word with the most common stem (at least, of the frequency data I had available which was not much). This, along with allowing buttons like L1+X to be *either* an S or a Z, fixed most everything except for `PLAYS`. Unfortunately, `PLACE` is more common than `PLAY` in the data I used (by a tiny amount), and so it picks it. This is the only mistake it makes, and some future improvements could fix this.
 
