@@ -186,8 +186,8 @@ Two things to note:
 ### Petscop 15 Transcript
 
 ```
-Ask? L2+X X L2+CIRCLE DOWN R1+TRIANGLE L2+SQUARE
-> MARKIN (approximate match)
+Ask? L2+X X L2+CIRCLE R2+DOWN R1+TRIANGLE L2+SQUARE
+> MARVIN (exact match)
 
 Ask? L1+X R1+TRIANGLE R2+CIRCLE
 > SIT (exact match)
@@ -258,7 +258,7 @@ Ask? L2+SQUARE R1+TRIANGLE R2+UP R2+CIRCLE R1+CIRCLE
 
 One mistake here: the "NO" ends up as "KNOW" since they are homophones.
 
-An unknown button is cut off-screen during the PLAYER line, which is why it is only PLAY here. I am inclined to believe that it is either CIRCLE or RIGHT since there was only one button press noise made, and whatever button it is makes the ER sound which is new -- it's not an existing one button sound. Personally I find RIGHT to be a more likely candidate than CIRCLE, but I will not add either to the table until we actually see it on-screen. Additionally the {NOT IN TABLE} line, which appears to be a botched attempt at saying MARVIN, becomes MARKIN. 
+An unknown button is cut off-screen during the PLAYER line, which is why it is only PLAY here. I am inclined to believe that it is either CIRCLE or RIGHT since there was only one button press noise made, and whatever button it is makes the ER sound which is new -- it's not an existing one button sound. Personally I find RIGHT to be a more likely candidate than CIRCLE, but I will not add either to the table until we actually see it on-screen. 
 
 For the purposes of this, I've assumed DOWN is schwa (AX/ə), but this is still up for debate.
 
